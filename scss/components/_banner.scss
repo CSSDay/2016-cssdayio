@@ -1,0 +1,30 @@
+$banner-height: 1.6em;
+
+.banner {
+    background-color: $dark-blue;
+    color: #fff;
+    display: inline-block;
+    height: $banner-height;
+    line-height: $banner-height;
+    position: relative;
+    margin-left: $banner-height;
+    margin-right: $banner-height;
+
+    &::before, &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        border: (0.5 * $banner-height) solid $dark-blue;
+    }
+
+    &::before {
+        left: calc(-1.6em + 1px); // things weren't aligning without the 1px back
+        border-left-color: transparent;
+    }
+
+    &::after {
+        right: -1.6em;
+        border-right-color: transparent;
+    }
+}

@@ -1,0 +1,14 @@
+.perspective, .perspective-reverse {
+    background-color: $pink;
+    color: #fff;
+    display: inline-block;
+    padding: 0 0.5em;
+}
+
+.perspective {
+    transform: perspective(500px) rotateY(50deg);
+}
+
+.perspective-reverse {
+    transform: perspective(500px) rotateY(-50deg);
+}

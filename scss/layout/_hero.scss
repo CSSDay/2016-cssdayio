@@ -1,0 +1,202 @@
+.hero {
+    background-image: url('/images/people.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    max-height: 600px;
+    position: relative;
+    transition: margin 1s;
+    overflow: hidden;
+
+    .intro {
+        position: absolute;
+        right: 3em;
+        top: 4em;
+        text-align: right;
+        transform: perspective(500px) rotateY(-40deg);
+        
+        h1 {
+            margin: 0;
+            line-height: 110%;
+            transition: all 0.3s;
+
+            span {
+                padding: 0 0.5em;
+                background-color: $pink;
+                color: #fff;
+            }
+        }
+
+    }
+
+}
+
+.page.scroll .hero .intro h1:first-child {
+    transform: translateX(500px);  
+    opacity: 0;       
+}
+
+.page.scroll .hero .intro h1:last-child {
+    transform: translateX(-500px);
+    opacity: 0;
+}
+
+// .presented-by-logo {
+//     position: absolute;
+//     top: 10em;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     width: 100px;
+
+//     @include respond(650px) {
+//         transform: none;
+//         left: 1em;
+//     }  
+// }
+
+// label.primary-nav-toggle {
+//     display: block;
+//     transition: background-color 1s;
+//     background-color: rgba(0,0,0,0);
+
+//     .toggle-nav {
+//         position: fixed;
+//         z-index: 1000;
+//         top: 2.5em;
+//         right: 1em;
+//         width: 50px;
+//         height: 50px;
+//         background-color: #fff;
+//         border: 1px solid rgba(189, 84, 139, 0.20);
+//         transition: transform 1.6s;
+
+//         text-align: center;
+//         font-size: 0.7em;
+//         color: $pink;
+//         padding-top: 15px;
+
+//         border-radius: 50%;
+//         cursor: pointer;
+//     }
+// }
+
+// .primary-nav {
+//     overflow: hidden;
+//     font-size: 2em;
+//     position: fixed;
+//     z-index: 1001;
+//     top: 1em;
+//     right: 1em;
+//     left: 1em;
+//     background-color: #fff;
+//     border-radius: 0.3em;
+//     text-align: center;
+
+//     // Animation
+//     transition: transform 1s;
+//     transform: perspective(1000px) rotateY(-90deg);
+//     transform-origin: 120%;
+
+//     a {
+//         color: $blue;
+//         display: block;
+//         padding: 0.3em 0;
+//         &:active { background-color: $pink; color: #fff; }
+//     }
+// }
+
+// #primary-nav-toggle {
+//     display: none;
+//     &:checked {
+//         + label.primary-nav-toggle {
+
+//             // Position the tinted-glass for closing the label
+//             position: fixed;
+//             z-index: 1000;
+//             top: 0;
+//             right: 0;
+//             bottom: 0;
+//             left: 0;
+//             background-color: rgba(0,0,0,0.6);
+
+//             .toggle-nav {
+//                 transform: translateX(500px);
+//             }
+
+//         }
+
+//         ~ .primary-nav {
+//             transform: perspective(1000px) rotateY(0);
+//         }
+//     }
+// }
+
+// // When does the nav become tabs
+// @include respond(920px) {
+
+//     // Turn off menu toggle
+//     label.primary-nav-toggle { display: none; }
+
+//     .primary-nav {
+//         overflow: visible;              // Reset
+//         left: auto;                     // Reset
+//         background-color: transparent;  // Reset
+//         font-size: 0.7em;                 // Reset
+//         position: absolute;             // Negate
+
+//         // Reset Animations
+//         transition: none;
+//         transform: none;
+//         transform-origin: 0;
+
+//         &::after {
+//             content: '';
+//             display: block;
+//             background-color: rgba(255,255,255,0.4);
+//             height: 3px;
+//             border-radius: 3px;
+//             position: absolute;
+//             z-index: 4;
+//             bottom: -3px;
+//             width: 100%;
+//         }
+
+//         a {
+//             display: inline-block;
+//             padding: 10px 20px;
+//             position: relative;
+//             color: rgba(255,255,255,0.7);
+
+//             &:active {
+//                 background-color: transparent; // Reset
+//             }
+
+//             &:hover {
+//                 color: #fff;
+//             }
+
+//             &::after {
+//                 content: '';
+//                 display: block;
+//                 height: 3px;
+//                 border-radius: 5px;
+//                 position: absolute;
+//                 bottom: -3px;
+//                 left: 0px;
+//                 right: 0px;
+//                 z-index: 5;
+//             }
+//         }
+
+
+//         a.selected, a:hover {
+//             color: #fff;
+
+//             &::after {
+//                 background-color: #fff;
+//             }
+//         }
+//     }
+    
+// }

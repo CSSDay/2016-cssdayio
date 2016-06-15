@@ -1,0 +1,48 @@
+// ****************************************
+//   Common tags 
+// ****************************************
+
+a {
+    color: $default-anchor-color;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a > i.fa {
+    font-size: 0.8em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+    font-family: $default-title-font-family;
+    letter-spacing: 0.1em;
+    color: $blue;
+    text-transform: uppercase;
+}
+
+h1 { font-size: 2em; }
+h2 { font-size: 1.3em; }
+h3 { font-size: 1.5em; }
+
+em { font-style: italic; }
+strong { font-weight: 700; }
+
+p {
+    line-height: 1.5em;
+    text-align: justify;
+
+    &.footnote { font-size: 0.7em; }
+
+    a { text-decoration: underline; }
+    strong { color: $pink; }
+}
+
+
+/****************************************
+  Selections
+*****************************************/
+
+::selection {
+    background: $pink;
+    color: white;
+}
