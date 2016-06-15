@@ -11,8 +11,7 @@ $(function() {
     });
 
     $('.primary-nav nav a').on('click', function() {
-        $('#toggle-menu').prop('checked', false)
+        $('#toggle-menu').prop('checked', false);
     })
-
 
 })
