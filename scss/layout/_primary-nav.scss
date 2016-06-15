@@ -24,12 +24,12 @@
     .menu-on {
         position: fixed;
         z-index: 102;
-        top: 1em;
-        right: 1em;
+        top: 0.2em;
+        right: 0.2em;
         background-color: $dark-gray;
         width: 3em;
         height: 3em;
-        border-radius: 50%;
+        border-radius: 5px;
     }
 
     .menu-off-tint {
@@ -67,6 +67,7 @@
     }
 
     @include wider-than($desktop-breakpoint) {
+        width: $desktop-page-width;
         position: fixed;
         z-index: 50;
         left: 50%;
@@ -78,11 +79,11 @@
         .menu-off-button { display: none; }
 
         nav {
-            position: static;
+            position: static; // negate all fixed position qualities
+            background-color: transparent;
             display: block;
             float: right;
             font-size: 0.8em;
-
 
             a {
                 display: inline-block;   
@@ -94,13 +95,14 @@
 
 .logo {
     position: absolute;
-    z-index: 200;
+    z-index: 99; // Below .primary-nav in mobile
     top: -0.5em;
     left: 0.2em;
     transition: all 0.5s;
     width: 150px;
 
     @include wider-than($desktop-breakpoint) {
+        z-index: 200; // Above .primary-nav in desktop
         width: 350px;
         top: -2em;
         left: -4em;
