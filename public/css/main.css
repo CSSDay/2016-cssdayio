@@ -64,14 +64,16 @@ strong {
   font-weight: 700; }
 
 p {
-  line-height: 1.5em;
-  text-align: justify; }
+  line-height: 1.5em; }
   p.footnote {
     font-size: 0.7em; }
   p a {
     text-decoration: underline; }
   p strong {
     color: #bd548b; }
+  @media (min-width: 600px) {
+    p {
+      text-align: justify; } }
 
 /****************************************
   Selections
@@ -263,7 +265,7 @@ main {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(255, 255, 255, 0.5); }
+    background-color: rgba(51, 51, 51, 0.9); }
   .primary-nav .menu-off-button {
     display: none;
     position: fixed;
@@ -364,14 +366,22 @@ main {
         color: #fff; }
   .hero .overview {
     position: absolute;
-    left: 2em;
-    bottom: 2em;
+    left: 0;
+    right: 0;
+    bottom: 1em;
+    text-align: center;
     color: #fff;
     text-shadow: 2px 2px 3px #036277;
     transition: all 0.5s;
     -webkit-transform: translateY(3em);
             transform: translateY(3em);
     opacity: 0; }
+    @media (min-width: 600px) {
+      .hero .overview {
+        bottom: 2em;
+        left: 2em;
+        right: auto;
+        text-align: left; } }
 
 .page.scroll .hero .intro h1:first-child {
   -webkit-transform: translateX(500px);

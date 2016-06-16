@@ -35,12 +35,15 @@ strong { font-weight: 700; }
 
 p {
     line-height: 1.5em;
-    text-align: justify;
 
     &.footnote { font-size: 0.7em; }
 
     a { text-decoration: underline; }
     strong { color: $pink; }
+
+    @include wider-than(600px) {
+        text-align: justify;
+    }
 }
 
 

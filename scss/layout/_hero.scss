@@ -41,13 +41,22 @@
 
     .overview {
         position: absolute;
-        left: 2em;
-        bottom: 2em;
+        left: 0;
+        right: 0;
+        bottom: 1em;
+        text-align: center;
         color: #fff;
         text-shadow: 2px 2px 3px $dark-blue;
         transition: all 0.5s;
         transform: translateY(3em);
         opacity: 0;
+
+        @include wider-than(600px) {
+            bottom: 2em;
+            left: 2em;
+            right: auto;
+            text-align: left;
+        }
     }
 
 }
