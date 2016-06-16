@@ -19,12 +19,12 @@ $banner-height: 1.6em;
     }
 
     &::before {
-        left: calc(-1.6em + 1px); // things weren't aligning without the 1px back
+        left: calc(-1.6em + 1px); // fixes some browser issues
         border-left-color: transparent;
     }
 
     &::after {
-        right: -1.6em;
+        right: calc(-1.6em + 1px); // fixes some browser issues
         border-right-color: transparent;
     }
 }

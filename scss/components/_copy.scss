@@ -16,13 +16,19 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
     font-family: $default-title-font-family;
     letter-spacing: 0.1em;
-    color: $blue;
     text-transform: uppercase;
+    margin: 0;
 }
 
-h1 { font-size: 2em; }
-h2 { font-size: 1.3em; }
-h3 { font-size: 1.5em; }
+h1 { font-size: 1.3em; }
+h2 { font-size: 1.2em; }
+h3 { font-size: 1em; }
+
+@include wider-than(900px) {
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.3em; }
+    h3 { font-size: 1.5em; }
+}
 
 em { font-style: italic; }
 strong { font-weight: 700; }

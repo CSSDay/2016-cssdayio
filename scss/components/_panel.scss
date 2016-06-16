@@ -9,7 +9,6 @@
         
         .perspective {
             border: 0.3em solid #fff;
-            transition: transform 0.5s;
         }
 
         > div {
@@ -23,7 +22,7 @@
             }
         }
 
-        > div + div:last-child { // last child if not first child
+        > div + div:last-child { // If the last child is not also the first
             text-align: right;
 
             .perspective {
@@ -35,19 +34,9 @@
 
     }
 
-
     &:nth-child(even) {
         background-color: #fafafa;
     }
-
-    // &:hover {
-    //     &:nth-child(odd) header .perspective {
-    //         transform: perspective(500px) rotateY(30deg);
-    //     }
-    //     &:nth-child(even) header .perspective {
-    //         transform: perspective(500px) rotateY(-30deg);
-    //     }  
-    // }
 
 }
 

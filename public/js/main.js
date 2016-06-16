@@ -3,7 +3,7 @@ $(function() {
     $(window).scroll(function() {    
         var scroll = $(window).scrollTop();
 
-        if (scroll >= 50) {
+        if (scroll >= 20) {
             $('.page').addClass('scroll');
         } else {
             $('.page').removeClass('scroll');

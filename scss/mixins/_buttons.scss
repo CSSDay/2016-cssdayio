@@ -1,0 +1,13 @@
+@mixin button-reset() {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    font-size: 1em;
+    outline: 0;
+    display: inline-block;
+    &::-moz-focus-inner { border: 0; }
+    &:hover {
+        outline: 0;
+    }
+}

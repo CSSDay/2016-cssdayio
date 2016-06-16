@@ -1,4 +1,9 @@
 .primary-footer {
     background: $pink;
-    height: 250px;
+    min-height: 250px;
+    padding: $gutter;
+    color: #fff;
+    a {
+        color: #fff;
+    }
 }

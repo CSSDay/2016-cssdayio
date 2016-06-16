@@ -19,10 +19,10 @@
             height: 700px;
             pointer-events: none;
 
-            transition: bottom 1s;
+            transition: transform 0.5s;
         }
         &.scroll::after {
-            bottom: -10em;
+            transform: translateY(-2em) scale(1.6);
         }
     }
 

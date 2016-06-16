@@ -24,13 +24,18 @@
     .menu-on {
         position: fixed;
         z-index: 102;
-        top: 0.2em;
-        right: 0.2em;
-        background-color: $dark-gray;
-        width: 3em;
-        height: 3em;
-        border-radius: 5px;
+        top: 0.5em;
+        right: 1em;
+        box-shadow: 2px 2px 8px rgba(#000, 0.5);
+        background-color: $pink;
+        padding: 0 1em;
+        border-radius: 3px;
         cursor: pointer;
+        &::before {
+            content: '•••';
+            display: block;
+            color: #fff;
+        }
     }
 
     .menu-off-tint {
@@ -73,7 +78,7 @@
         z-index: 50;
         left: 50%;
         transform: translateX(-50%);
-        background-color: $dark-blue;
+        background-color: rgba($dark-blue, 0.6);
 
         .menu-on { display: none; }
         .menu-off-tint { display: none; }

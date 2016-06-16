@@ -1,0 +1,11 @@
+.panel.event-venue {
+    background-image: url('/images/photos.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include wider-than(900px) {
+
+        // We need this since the image crowds the content
+        header { margin-bottom: $gutter * 2; }
+    }
+}
