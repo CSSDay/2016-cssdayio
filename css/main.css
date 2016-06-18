@@ -235,7 +235,9 @@ main {
   position: fixed;
   z-index: 999;
   top: 0.5em;
-  right: 1em;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
   background-color: #bd548b;
   padding: 0 1em;
