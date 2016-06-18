@@ -283,9 +283,9 @@ main {
   display: block; }
 
 @media (max-width: 950px) {
-  .page.show-menu .menu-on, .page.show-menu .menu-off-tint, .page.show-menu .menu-off-button, .page.show-menu .primary-nav nav {
-    -webkit-transform: zoom(1.001);
-            transform: zoom(1.001); } }
+  .page.show-menu .perspective {
+    -webkit-transform-style: flat;
+            transform-style: flat; } }
 
 @media (min-width: 950px) {
   .menu-on {
