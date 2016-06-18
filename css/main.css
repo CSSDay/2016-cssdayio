@@ -213,8 +213,12 @@ button:not(.no-theme), a.button {
       transition: -webkit-transform 0.5s;
       transition: transform 0.5s; }
     .page.scroll::after {
-      -webkit-transform: translateY(-2em) scale(1.6);
-              transform: translateY(-2em) scale(1.6); } }
+      -webkit-transform: translateY(10%) scale(1.4);
+              transform: translateY(10%) scale(1.4); } }
+  @media (min-width: 1500px) {
+    .page.scroll::after {
+      -webkit-transform: translateY(25%) scale(1.4);
+              transform: translateY(25%) scale(1.4); } }
 
 main {
   background-color: #fff;
@@ -371,11 +375,7 @@ main {
     bottom: 1em;
     text-align: center;
     color: #fff;
-    text-shadow: 2px 2px 3px #036277;
-    transition: all 0.5s;
-    -webkit-transform: translateY(3em);
-            transform: translateY(3em);
-    opacity: 0; }
+    text-shadow: 2px 2px 3px #036277; }
     @media (min-width: 600px) {
       .hero .overview {
         bottom: 2em;
@@ -392,11 +392,6 @@ main {
   -webkit-transform: translateX(-500px);
           transform: translateX(-500px);
   opacity: 0; }
-
-.page.scroll .hero .overview {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  opacity: 1; }
 
 .primary-footer {
   background: #bd548b;
