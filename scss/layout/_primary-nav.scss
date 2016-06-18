@@ -48,7 +48,7 @@
     .menu-off-tint { display: block; }
     .menu-off-button { display: block; }
     .primary-nav nav { display: block; }
-    .perspective { transform: none; } // ios can't handle it :(
+    .perspective { transform: none; !important } // ios can't handle it :(
 }
 
 .primary-nav {
