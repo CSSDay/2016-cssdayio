@@ -71,6 +71,11 @@ p {
     text-decoration: underline; }
   p strong {
     color: #bd548b; }
+  p img.infusionsoft {
+    vertical-align: middle;
+    height: 1em;
+    top: -3px;
+    position: relative; }
   @media (min-width: 600px) {
     p {
       text-align: justify; } }
