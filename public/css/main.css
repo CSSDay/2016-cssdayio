@@ -278,6 +278,10 @@ main {
 .page.show-menu .primary-nav nav {
   display: block; }
 
+.page.show-menu .perspective {
+  -webkit-transform: none;
+          transform: none; }
+
 .primary-nav {
   background-color: #333;
   transition: background-color 0.5s; }
