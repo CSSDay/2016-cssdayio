@@ -228,6 +228,9 @@ main {
     main {
       width: 900px; } }
 
+/****************************************
+  JS Controlled Mobile Nav
+*****************************************/
 .menu-on {
   position: fixed;
   z-index: 999;
@@ -250,7 +253,8 @@ main {
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0; }
+  left: 0;
+  background-color: rgba(51, 51, 51, 0.9); }
 
 .menu-off-button {
   display: none;
@@ -278,10 +282,22 @@ main {
 .page.show-menu .primary-nav nav {
   display: block; }
 
-.page.show-menu .perspective {
-  -webkit-transform: none !important;
-          transform: none !important; }
+@media (max-width: 950px) {
+  .page.show-menu .perspective {
+    -webkit-transform: none !important;
+            transform: none !important; } }
 
+@media (min-width: 950px) {
+  .menu-on {
+    display: none; }
+  .menu-off-tint {
+    display: none; }
+  .menu-off-button {
+    display: none; } }
+
+/****************************************
+  Primary Nav
+*****************************************/
 .primary-nav {
   background-color: #333;
   transition: background-color 0.5s; }
@@ -307,12 +323,6 @@ main {
       -webkit-transform: translateX(-50%);
               transform: translateX(-50%);
       background-color: rgba(3, 98, 119, 0.6); }
-      .primary-nav .menu-on {
-        display: none; }
-      .primary-nav .menu-off-tint {
-        display: none; }
-      .primary-nav .menu-off-button {
-        display: none; }
       .primary-nav nav {
         position: static;
         background-color: transparent;
