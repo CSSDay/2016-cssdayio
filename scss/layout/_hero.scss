@@ -47,9 +47,6 @@
         text-align: center;
         color: #fff;
         text-shadow: 2px 2px 3px $dark-blue;
-        transition: all 0.5s;
-        transform: translateY(3em);
-        opacity: 0;
 
         @include wider-than(600px) {
             bottom: 2em;
@@ -74,10 +71,9 @@
         }
     }
 
-    .overview {
-        transform: translateY(0);
-        opacity: 1; 
-    }
-
+    // .overview {
+    //     transform: translateY(0);
+    //     opacity: 1; 
+    // }
 
 }

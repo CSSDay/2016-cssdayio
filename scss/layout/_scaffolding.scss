@@ -22,10 +22,14 @@
             transition: transform 0.5s;
         }
         &.scroll::after {
-            transform: translateY(-2em) scale(1.6);
+            transform: translateY(10%) scale(1.4);
         }
     }
-
+    @include wider-than(1500px) {
+        &.scroll::after {
+            transform: translateY(25%) scale(1.4);
+        }
+    }
 }
 
 main {
