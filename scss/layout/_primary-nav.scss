@@ -1,4 +1,6 @@
-//#toggle-menu { display: none; }
+/****************************************
+  JS Controlled Mobile Nav
+*****************************************/
 
 .menu-on {
     position: fixed;
@@ -25,7 +27,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    //background-color: rgba($dark-gray, 0.9);
+    background-color: rgba($dark-gray, 0.9);
 }
 
 .menu-off-button {
@@ -48,8 +50,23 @@
     .menu-off-tint { display: block; }
     .menu-off-button { display: block; }
     .primary-nav nav { display: block; }
-    .perspective { transform: none !important; } // ios can't handle it :(
+
+    // Only employ this fix when in small screen mode
+    @media (max-width: $desktop-breakpoint) {
+        .perspective { transform: none !important; } // ios can't handle it :(
+    }
 }
+
+@include wider-than($desktop-breakpoint) {
+    .menu-on { display: none; }
+    .menu-off-tint { display: none; }
+    .menu-off-button { display: none; }
+}
+
+
+/****************************************
+  Primary Nav
+*****************************************/
 
 .primary-nav {
     background-color: $dark-gray;
@@ -79,10 +96,6 @@
         left: 50%;
         transform: translateX(-50%);
         background-color: rgba($dark-blue, 0.6);
-
-        .menu-on { display: none; }
-        .menu-off-tint { display: none; }
-        .menu-off-button { display: none; }
 
         nav {
             position: static; // negate all fixed position qualities
