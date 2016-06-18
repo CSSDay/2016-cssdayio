@@ -41,6 +41,13 @@ p {
     a { text-decoration: underline; }
     strong { color: $pink; }
 
+    img.infusionsoft {
+        vertical-align: middle;
+        height: 1em;
+        top: -3px;
+        position: relative;
+    }
+
     @include wider-than(600px) {
         text-align: justify;
     }
