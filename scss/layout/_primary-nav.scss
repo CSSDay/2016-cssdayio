@@ -51,10 +51,16 @@
     .menu-off-button { display: block; }
     .primary-nav nav { display: block; }
 
-    // Only employ this fix when in small screen mode
-    @media (max-width: $desktop-breakpoint) {
-        .perspective { transform: none !important; } // ios can't handle it :(
+    .menu-on, .menu-off-tint, .menu-off-button, .primary-nav nav {
+        @media (max-width: $desktop-breakpoint) {
+            transform: zoom(1.001);
+        }
     }
+
+    // // Only employ this fix when in small screen mode
+    // @media (max-width: $desktop-breakpoint) {
+    //     .perspective { transform: none !important; } // ios can't handle it :(
+    // }
 }
 
 @include wider-than($desktop-breakpoint) {
