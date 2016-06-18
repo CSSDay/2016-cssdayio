@@ -46,7 +46,7 @@
         right: 0;
         bottom: 0;
         left: 0;
-        background-color: rgba($dark-gray, 0.9);
+        //background-color: rgba($dark-gray, 0.9);
     }
 
     .menu-off-button {
@@ -61,15 +61,14 @@
         padding: 1em;
         background-color: $pink;
         cursor: pointer;
+        border: 5px solid rgba($dark-gray, 0.5);
     }
 
     #toggle-menu:checked {
         ~ .menu-on { display: none; }
         ~ .menu-off-tint { display: block; }
         ~ .menu-off-button { display: block; }
-        ~ nav {
-            display: block;
-        }
+        ~ nav { display: block; }
     }
 
     @include wider-than($desktop-breakpoint) {
