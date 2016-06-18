@@ -53,7 +53,7 @@
 
     // Only employ this fix when in small screen mode
     @media (max-width: $desktop-breakpoint) {
-        .perspective { transform: none !important; } // ios can't handle it :(
+        .perspective { display: none; } // ios can't handle it :(
     }
 }
 
