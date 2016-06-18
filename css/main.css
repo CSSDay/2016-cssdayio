@@ -284,8 +284,7 @@ main {
 
 @media (max-width: 950px) {
   .page.show-menu .perspective {
-    -webkit-transform: none !important;
-            transform: none !important; } }
+    display: none; } }
 
 @media (min-width: 950px) {
   .menu-on {
