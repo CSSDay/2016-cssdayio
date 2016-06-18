@@ -228,8 +228,55 @@ main {
     main {
       width: 900px; } }
 
-#toggle-menu {
+.menu-on {
+  position: fixed;
+  z-index: 999;
+  top: 0.5em;
+  right: 1em;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  background-color: #bd548b;
+  padding: 0 1em;
+  border-radius: 3px;
+  cursor: pointer; }
+  .menu-on::before {
+    content: '•••';
+    display: block;
+    color: #fff; }
+
+.menu-off-tint {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+.menu-off-button {
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  right: 1em;
+  bottom: 1em;
+  left: 1em;
+  color: #fff;
+  text-align: center;
+  padding: 1em;
+  background-color: #bd548b;
+  cursor: pointer;
+  border: 5px solid rgba(51, 51, 51, 0.5); }
+
+.page.show-menu .menu-on {
   display: none; }
+
+.page.show-menu .menu-off-tint {
+  display: block; }
+
+.page.show-menu .menu-off-button {
+  display: block; }
+
+.page.show-menu .primary-nav nav {
+  display: block; }
 
 .primary-nav {
   background-color: #333;
@@ -247,49 +294,6 @@ main {
       display: block;
       padding: 0.5em 1em;
       text-align: center; }
-  .primary-nav .menu-on {
-    position: fixed;
-    z-index: 999;
-    top: 0.5em;
-    right: 1em;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-    background-color: #bd548b;
-    padding: 0 1em;
-    border-radius: 3px;
-    cursor: pointer; }
-    .primary-nav .menu-on::before {
-      content: '•••';
-      display: block;
-      color: #fff; }
-  .primary-nav .menu-off-tint {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0; }
-  .primary-nav .menu-off-button {
-    display: none;
-    position: fixed;
-    z-index: 1001;
-    right: 1em;
-    bottom: 1em;
-    left: 1em;
-    color: #fff;
-    text-align: center;
-    padding: 1em;
-    background-color: #bd548b;
-    cursor: pointer;
-    border: 5px solid rgba(51, 51, 51, 0.5); }
-  .primary-nav #toggle-menu:checked ~ .menu-on {
-    display: none; }
-  .primary-nav #toggle-menu:checked ~ .menu-off-tint {
-    display: block; }
-  .primary-nav #toggle-menu:checked ~ .menu-off-button {
-    display: block; }
-  .primary-nav #toggle-menu:checked ~ nav {
-    display: block; }
   @media (min-width: 950px) {
     .primary-nav {
       width: 900px;

@@ -1,4 +1,57 @@
-#toggle-menu { display: none; }
+//#toggle-menu { display: none; }
+
+.menu-on {
+    position: fixed;
+    z-index: 999;
+    top: 0.5em;
+    right: 1em;
+    box-shadow: 2px 2px 8px rgba(#000, 0.5);
+    background-color: $pink;
+    padding: 0 1em;
+    border-radius: 3px;
+    cursor: pointer;
+    &::before {
+        content: '•••';
+        display: block;
+        color: #fff;
+    }
+}
+
+.menu-off-tint {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    //background-color: rgba($dark-gray, 0.9);
+}
+
+.menu-off-button {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    right: 1em;
+    bottom: 1em;
+    left: 1em;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    background-color: $pink;
+    cursor: pointer;
+    border: 5px solid rgba($dark-gray, 0.5);
+}
+
+.page.show-menu {
+    .menu-on { display: none; }
+    .menu-off-tint { display: block; }
+    .menu-off-button { display: block; }
+    .primary-nav nav { display: block; }
+}
+
+
+
 
 .primary-nav {
     background-color: $dark-gray;
@@ -19,56 +72,6 @@
             padding: 0.5em 1em;
             text-align: center;
         }
-    }
-
-    .menu-on {
-        position: fixed;
-        z-index: 999;
-        top: 0.5em;
-        right: 1em;
-        box-shadow: 2px 2px 8px rgba(#000, 0.5);
-        background-color: $pink;
-        padding: 0 1em;
-        border-radius: 3px;
-        cursor: pointer;
-        &::before {
-            content: '•••';
-            display: block;
-            color: #fff;
-        }
-    }
-
-    .menu-off-tint {
-        display: none;
-        position: fixed;
-        z-index: 1000;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        //background-color: rgba($dark-gray, 0.9);
-    }
-
-    .menu-off-button {
-        display: none;
-        position: fixed;
-        z-index: 1001;
-        right: 1em;
-        bottom: 1em;
-        left: 1em;
-        color: #fff;
-        text-align: center;
-        padding: 1em;
-        background-color: $pink;
-        cursor: pointer;
-        border: 5px solid rgba($dark-gray, 0.5);
-    }
-
-    #toggle-menu:checked {
-        ~ .menu-on { display: none; }
-        ~ .menu-off-tint { display: block; }
-        ~ .menu-off-button { display: block; }
-        ~ nav { display: block; }
     }
 
     @include wider-than($desktop-breakpoint) {
