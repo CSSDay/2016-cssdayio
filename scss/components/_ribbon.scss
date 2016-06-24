@@ -1,21 +1,21 @@
-$banner-height: 1.6em;
+$ribbon-height: 1.6em;
 
-.banner {
+.ribbon {
     background-color: $dark-blue;
     color: #fff;
     display: inline-block;
-    height: $banner-height;
-    line-height: $banner-height;
+    height: $ribbon-height;
+    line-height: $ribbon-height;
     position: relative;
-    margin-left: $banner-height;
-    margin-right: $banner-height;
+    margin-left: $ribbon-height;
+    margin-right: $ribbon-height;
 
     &::before, &::after {
         content: '';
         display: block;
         position: absolute;
         top: 0;
-        border: (0.5 * $banner-height) solid $dark-blue;
+        border: (0.5 * $ribbon-height) solid $dark-blue;
     }
 
     &::before {

@@ -1,0 +1,112 @@
+$grid-line-color: #ddd;
+$grid-gutter: 0.5 * $gutter;
+
+.info-table {
+    @include info-table($grid-line-color, $grid-gutter, 700px);
+    margin-top: $gutter;
+    margin-bottom: $gutter;
+
+    .row.header {
+        background-color: #eee;
+        .col {
+            border: none;
+        }
+        .col + .col {
+            display: none;
+        }
+        strong {
+            color: $blue;
+        }
+    }
+
+    .title {
+        font-weight: bold;
+        color: $pink;
+    }
+
+    .description {
+        display: block;
+        margin-top: $grid-gutter;
+    }
+
+    .terms {
+        display: block;
+        font-family: Arial;
+        font-weight: bold;
+        margin-top: $grid-gutter;
+    }
+
+    .check {
+        display: inline;
+        fill: $blue;
+        width: 1em;
+        height: 1em;
+        margin-right: 0.5em;
+    }
+
+    &.packages {
+        .col + .col {
+            text-align: center;
+        }
+    }
+
+    @media (min-width: 700px) {
+        font-size: 0.7em;
+
+        .row.header .col + .col {
+            display: table-cell;
+        }
+
+        .check {
+            width: 2em;
+            height: 2em;
+            margin-right: 0;
+        }
+
+        &.packages .col + .col span {
+            display: none;
+        }
+    }
+
+
+}
+
+.info-table.sponsor-types {
+
+    .col {
+        position: relative;
+    }
+
+    .type {
+        font-weight: bold;
+        color: $pink;
+    }
+
+    .price {
+        float: right;
+        font-weight: bold;
+    }
+
+    .spots {
+        clear: both;
+        font-size: 0.8em;
+        display: block;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .sold-out {
+        //font-size: 0.5em;
+        background-color: $blue;
+        color: #fff;
+        padding: 0.3em;
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        border-radius: 2px;
+        transform: rotate(-10deg);
+        z-index: 1000;
+    }
+
+}
+

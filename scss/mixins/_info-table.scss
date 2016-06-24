@@ -1,0 +1,42 @@
+@mixin info-table($line-color, $gutter, $respond) {
+    border: 1px solid $line-color;
+    border-radius: 5px;
+    .col { padding: $gutter; }
+    .row + .row { border-top: 1px solid $line-color; }
+
+    @media (min-width: $respond) {
+
+        .row {
+            display: flex;
+        }
+        .col {
+            border-top: none !important;
+        }
+        .col:not([class^="col span"]) {
+            flex: 1;
+        }
+
+        .col + .col {
+            border-left: 1px solid $line-color;
+        }
+
+        .col.span-1 { width: percentage(1/16); }
+        .col.span-2 { width: percentage(2/16); }
+        .col.span-3 { width: percentage(3/16); }
+        .col.span-4 { width: percentage(4/16); }
+        .col.span-5 { width: percentage(5/16); }
+        .col.span-6 { width: percentage(6/16); }
+        .col.span-7 { width: percentage(7/16); }
+        .col.span-8 { width: percentage(8/16); }
+        .col.span-9 { width: percentage(9/16); }
+        .col.span-10 { width: percentage(10/16); }
+        .col.span-11 { width: percentage(11/16); }
+        .col.span-12 { width: percentage(12/16); }
+        .col.span-13 { width: percentage(13/16); }
+        .col.span-14 { width: percentage(14/16); }
+        .col.span-15 { width: percentage(15/16); }
+        .col.span-16 { width: 100%; }
+
+    }
+
+}

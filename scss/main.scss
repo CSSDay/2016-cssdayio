@@ -7,6 +7,7 @@
 @import "vars";
 @import "mixins/layout";
 @import "mixins/buttons";
+@import "mixins/info-table";
 
 
 /**
@@ -21,18 +22,19 @@
  */
 
 @import "components/copy";
-@import "components/panel";
 @import "components/perspective";
-@import "components/banner";
+@import "components/ribbon";
 @import "components/buttons";
-@import "components/event-venue";
-// @import "components/grid";
+@import "components/info-table";
 
 /**
  * Layout
  */
 
 @import "layout/scaffolding";
+@import "layout/panel";
+@import "layout/panel-event-venue";
+@import "layout/sponsorship-details";
 @import "layout/primary-nav";
 @import "layout/hero";
 @import "layout/primary-footer";

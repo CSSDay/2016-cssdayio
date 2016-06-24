@@ -122,13 +122,15 @@
     transition: all 0.5s;
     width: 150px;
 
+}
+
+.page.home .logo {
     @include wider-than($desktop-breakpoint) {
         z-index: 200; // Above .primary-nav in desktop
         width: 350px;
         top: -2em;
         left: -4em;
     }
-
 }
 
 .page.scroll {
