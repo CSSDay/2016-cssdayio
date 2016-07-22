@@ -272,13 +272,14 @@ button:not(.no-theme), a.button {
   font-weight: bold;
   margin-top: 10px; }
 
-.info-table.sponsor-types .sold-out {
+.info-table.sponsor-types .status {
+  font-size: 0.8em;
   background-color: #31AFCB;
   color: #fff;
   padding: 0.3em;
   position: absolute;
-  bottom: 30px;
-  left: 50%;
+  top: -8px;
+  left: -5px;
   border-radius: 2px;
   -webkit-transform: rotate(-10deg);
           transform: rotate(-10deg);
