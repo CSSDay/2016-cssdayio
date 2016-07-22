@@ -95,14 +95,14 @@ $grid-gutter: 0.5 * $gutter;
         margin-top: 10px;
     }
 
-    .sold-out {
-        //font-size: 0.5em;
+    .status {
+        font-size: 0.8em;
         background-color: $blue;
         color: #fff;
         padding: 0.3em;
         position: absolute;
-        bottom: 30px;
-        left: 50%;
+        top: -8px;
+        left: -5px;
         border-radius: 2px;
         transform: rotate(-10deg);
         z-index: 1000;
