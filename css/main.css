@@ -285,6 +285,41 @@ button:not(.no-theme), a.button {
           transform: rotate(-10deg);
   z-index: 1000; }
 
+.sponsor-logos {
+  text-align: center; }
+  .sponsor-logos > a {
+    display: inline-block;
+    width: 45%; }
+  .sponsor-logos img {
+    vertical-align: middle;
+    max-height: 120px;
+    width: 80%;
+    margin-top: 1em;
+    margin-bottom: 1em; }
+  .sponsor-logos .next {
+    display: inline-block;
+    vertical-align: middle;
+    width: 250px;
+    background-color: #eee;
+    font-size: 0.8em;
+    padding: 1em;
+    border-radius: 1em; }
+    .sponsor-logos .next strong {
+      color: #bd548b; }
+    .sponsor-logos .next > * {
+      display: block; }
+  .sponsor-logos:hover .next {
+    -webkit-animation-name: shakeit;
+            animation-name: shakeit;
+    -webkit-animation-duration: 0.8s;
+            animation-duration: 0.8s;
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear; }
+
 /**
  * Layout
  */
