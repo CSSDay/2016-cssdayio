@@ -9,26 +9,24 @@
   display: none;
 }
 
-.speaker-profiles-frame, .speaker-profiles {
+body:not(.safari) .speaker-profiles-frame, .speaker-profiles {
+  display: none;
   position: fixed;
   width: 90vw;
   max-width: 1200px;
-
   height: 70%;
-
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  display: none;
+  border-radius: 2em;
 
   @include wider-than(780px) {
     height: 80%;
   }
 }
 
-.speaker-profiles-frame {
+body:not(.safari) .speaker-profiles-frame {
   z-index: $z-speaker-profiles-frame;
-  border-radius: 2em;
   overflow: hidden;
 
   &::before {
@@ -86,4 +84,9 @@
   .speaker-profiles-tint { display: block; }
   .speaker-profiles-frame { display: block; }
   .speaker-profiles { display: block; }
+}
+
+// Fix in safari
+.safari .speaker-profiles {
+  background-color: $dark-blue;
 }

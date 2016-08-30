@@ -1,40 +1,29 @@
 .panel {
-    padding: $gutter;
-    padding-top: 0;
+  padding: $gutter;
+  padding-top: 0;
 
-    header {
-        display: flex;
-        height: 4em;
-        
-        .perspective {
-            border: 0.3em solid #fff;
-        }
+  header {
+    height: 4em;
 
-        > div {
-            flex: 1;
-            align-self: center;
-        }
-
-        > div:first-child {
-            .perspective {
-                margin-left: -2em;
-            }
-        }
-
-        > div + div:last-child { // If the last child is not also the first
-            text-align: right;
-
-            .perspective {
-                margin-right: -2em;
-                transform: perspective(500px) rotateY(-50deg);
-            }
-        }
-
+    h1 {
+      background-color: $pink;
+      color: #fff;
+      display: inline-block;
+      padding: 0 0.5em;
+      border: 0.3em solid #fff;
+      transform: perspective(500px) rotateY(50deg);
+      margin-left: -2em;
     }
 
-    &:nth-child(odd) {
-        background-color: #fafafa;
-    }
+  }
+
+  // Alternate Panels
+  &:nth-child(odd) {
+    background-color: #fafafa;
+  }
 
 }
 
+.safari .panel header h1 {
+  transform: none;
+}
