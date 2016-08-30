@@ -16,3 +16,17 @@ $default-anchor-color: $blue;
 $gutter: 1.5rem;
 $desktop-page-width: 900px;
 $desktop-breakpoint: 950px;
+
+// Z-Index
+$z-desktop-nav: 50;
+$z-trees: 51;
+$z-speaker-tint: 60;
+$z-speaker-profiles-frame: 61;
+$z-speaker-profiles: 62;
+$z-speaker-profiles-content: 63;
+$z-logo-mobile: 99;
+$z-logo-desktop: 200;
+$z-menu-on: 999;
+$z-menu-off-tint: 1000;
+$z-menu-off-button: 1001;
+$z-mobile-nav: 1002;

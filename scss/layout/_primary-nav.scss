@@ -4,7 +4,7 @@
 
 .menu-on {
     position: fixed;
-    z-index: 999;
+    z-index: $z-menu-on;
     top: 0.5em;
     left: 50%;
     transform: translateX(-50%);
@@ -24,7 +24,7 @@
 .menu-off-tint {
     display: none;
     position: fixed;
-    z-index: 1000;
+    z-index: $z-menu-off-tint;
     top: 0;
     right: 0;
     bottom: 0;
@@ -35,7 +35,7 @@
 .menu-off-button {
     display: none;
     position: fixed;
-    z-index: 1001;
+    z-index: $z-menu-off-button;
     right: 1em;
     bottom: 1em;
     left: 1em;
@@ -77,7 +77,7 @@
     nav {
         display: none;
         position: fixed;
-        z-index: 1002;
+        z-index: $z-mobile-nav;
         top: 0;
         right: 0;
         left: 0;
@@ -94,7 +94,7 @@
     @include wider-than($desktop-breakpoint) {
         width: $desktop-page-width;
         position: fixed;
-        z-index: 50;
+        z-index: $z-desktop-nav;
         left: 50%;
         transform: translateX(-50%);
         background-color: rgba($dark-blue, 0.6);
@@ -115,34 +115,33 @@
 }
 
 .logo {
-    position: absolute;
-    z-index: 99; // Below .primary-nav in mobile
-    top: -0.5em;
-    left: 0.2em;
-    transition: all 0.5s;
-    width: 150px;
-
+  position: absolute;
+  z-index: $z-logo-mobile; // Below .primary-nav in mobile
+  top: -0.5em;
+  left: 0.2em;
+  transition: all 0.5s;
+  width: 150px;
 }
 
 .page.home .logo {
-    @include wider-than($desktop-breakpoint) {
-        z-index: 200; // Above .primary-nav in desktop
-        width: 350px;
-        top: -2em;
-        left: -4em;
-    }
+  @include wider-than($desktop-breakpoint) {
+    z-index: $z-logo-desktop; // Above .primary-nav in desktop
+    width: 350px;
+    top: -2em;
+    left: -4em;
+  }
 }
 
 .page.scroll {
-    @include wider-than($desktop-breakpoint) {
-        .primary-nav {
-            background-color: $dark-gray;
-        }
-
-        .logo {
-            left: -3em;
-            top: -1em;
-            width: 150px;
-        }
+  @include wider-than($desktop-breakpoint) {
+    .primary-nav {
+      background-color: $dark-gray;
     }
+
+    .logo {
+      left: -3em;
+      top: -1em;
+      width: 150px;
+    }
+  }
 }

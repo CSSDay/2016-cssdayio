@@ -26,16 +26,18 @@
 @import "components/ribbon";
 @import "components/buttons";
 @import "components/info-table";
+@import "components/speaker-list";
 @import "components/sponsor-logos";
 
 /**
  * Layout
  */
 
-@import "layout/scaffolding";
-@import "layout/panel";
+@import "layout/hero";
 @import "layout/panel-event-venue";
+@import "layout/panel";
+@import "layout/scaffolding";
 @import "layout/sponsorship-details";
 @import "layout/primary-nav";
-@import "layout/hero";
+@import "layout/speaker-profiles";
 @import "layout/primary-footer";

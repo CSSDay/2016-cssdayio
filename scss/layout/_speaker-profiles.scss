@@ -1,0 +1,89 @@
+.speaker-profiles-tint {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(#000, 0.5);
+  z-index: $z-speaker-tint;
+  display: none;
+}
+
+.speaker-profiles-frame, .speaker-profiles {
+  position: fixed;
+  width: 90vw;
+  max-width: 1200px;
+
+  height: 70%;
+
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+
+  @include wider-than(780px) {
+    height: 80%;
+  }
+}
+
+.speaker-profiles-frame {
+  z-index: $z-speaker-profiles-frame;
+  border-radius: 2em;
+  overflow: hidden;
+
+  &::before {
+    content:'';
+    position: absolute;
+
+    // position of the cuttout
+    bottom: 165px;
+    width: 120px;
+    height: 120px;
+    right: 70px;
+    top: -60px;
+
+    border-radius: 100%;
+    box-shadow: 0px 2000px 0px 2300px $dark-blue;
+  }
+}
+  
+.speaker-profiles {
+  z-index: $z-speaker-profiles;
+
+  .speaker {
+    color: #fff;
+    display: none;
+
+    .image {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      right: 80px;
+      top: -50px;
+      background-size: cover;
+      border: 5px solid $blue;
+      border-radius: 50%;
+    }
+
+    .content {
+      position: absolute;
+      left: 40px;
+      top: 80px;
+      right: 40px;
+      bottom: 40px;
+      z-index: $z-speaker-profiles-content;
+      overflow-y: scroll;
+    }
+
+    .title {
+      font-family: $default-title-font-family;
+    }
+
+  }
+}
+
+.page.show-profile {
+  .speaker-profiles-tint { display: block; }
+  .speaker-profiles-frame { display: block; }
+  .speaker-profiles { display: block; }
+}
