@@ -91,20 +91,6 @@ p {
   background: #bd548b;
   color: white; }
 
-.perspective, .perspective-reverse {
-  background-color: #bd548b;
-  color: #fff;
-  display: inline-block;
-  padding: 0 0.5em; }
-
-.perspective {
-  -webkit-transform: perspective(500px) rotateY(50deg);
-          transform: perspective(500px) rotateY(50deg); }
-
-.perspective-reverse {
-  -webkit-transform: perspective(500px) rotateY(-50deg);
-          transform: perspective(500px) rotateY(-50deg); }
-
 .ribbon {
   background-color: #036277;
   color: #fff;
@@ -456,26 +442,22 @@ button:not(.no-theme), a.button {
   padding: 1.5rem;
   padding-top: 0; }
   .panel header {
-    display: -ms-flexbox;
-    display: flex;
     height: 4em; }
-    .panel header .perspective {
-      border: 0.3em solid #fff; }
-    .panel header > div {
-      -ms-flex: 1;
-          flex: 1;
-      -ms-flex-item-align: center;
-          align-self: center; }
-    .panel header > div:first-child .perspective {
+    .panel header h1 {
+      background-color: #bd548b;
+      color: #fff;
+      display: inline-block;
+      padding: 0 0.5em;
+      border: 0.3em solid #fff;
+      -webkit-transform: perspective(500px) rotateY(50deg);
+              transform: perspective(500px) rotateY(50deg);
       margin-left: -2em; }
-    .panel header > div + div:last-child {
-      text-align: right; }
-      .panel header > div + div:last-child .perspective {
-        margin-right: -2em;
-        -webkit-transform: perspective(500px) rotateY(-50deg);
-                transform: perspective(500px) rotateY(-50deg); }
   .panel:nth-child(odd) {
     background-color: #fafafa; }
+
+.safari .panel header h1 {
+  -webkit-transform: none;
+          transform: none; }
 
 .page {
   background-image: linear-gradient(-40deg, #31AFCB, #bd548b); }
@@ -662,7 +644,8 @@ main {
   z-index: 60;
   display: none; }
 
-.speaker-profiles-frame, .speaker-profiles {
+body:not(.safari) .speaker-profiles-frame, .speaker-profiles {
+  display: none;
   position: fixed;
   width: 90vw;
   max-width: 1200px;
@@ -671,16 +654,15 @@ main {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  display: none; }
+  border-radius: 2em; }
   @media (min-width: 780px) {
-    .speaker-profiles-frame, .speaker-profiles {
+    body:not(.safari) .speaker-profiles-frame, .speaker-profiles {
       height: 80%; } }
 
-.speaker-profiles-frame {
+body:not(.safari) .speaker-profiles-frame {
   z-index: 61;
-  border-radius: 2em;
   overflow: hidden; }
-  .speaker-profiles-frame::before {
+  body:not(.safari) .speaker-profiles-frame::before {
     content: '';
     position: absolute;
     bottom: 165px;
@@ -724,6 +706,9 @@ main {
 
 .page.show-profile .speaker-profiles {
   display: block; }
+
+.safari .speaker-profiles {
+  background-color: #036277; }
 
 .primary-footer {
   background: #bd548b;

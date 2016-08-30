@@ -25,10 +25,15 @@ $(function() {
     $('.speaker.' + speaker).show();
   });
 
-
   $('.speaker-profiles-tint').on('click', function() {
     $('.page').removeClass('show-profile');
     $('.speaker-profiles .speaker').hide();
   });
+
+  // Safari hook for CSS stuff
+  var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+  if (isSafari) {
+    $('body').addClass('safari')
+  }
 
 })
