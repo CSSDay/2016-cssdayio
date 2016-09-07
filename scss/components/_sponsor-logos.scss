@@ -1,45 +1,42 @@
 .sponsor-logos {
-    text-align: center;
+  text-align: center;
 
-    > a {
-        display: inline-block;
-        width: 45%;
+  > a {
+    display: inline-block;
+    width: 45%;
+    min-width: 350px;
+  }
+
+  img {
+    vertical-align: middle;
+    max-height: 120px;
+    width: 80%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  .next {
+    display: inline-block;
+    vertical-align: middle;
+    width: 250px;
+    background-color: #eee;
+    font-size: 0.8em;
+    padding: 1em;
+    border-radius: 1em;
+    strong {
+      color: $pink;
     }
-
-    // a:nth-child(1) {
-    //     width: 40%;
-    // }
-
-    img {
-        vertical-align: middle;
-        max-height: 120px;
-        width: 80%;
-        margin-top: 1em;
-        margin-bottom: 1em;
+    > * {
+      display: block;
     }
+  }
 
-    .next {
-        display: inline-block;
-        vertical-align: middle;
-        width: 250px;
-        background-color: #eee;
-        font-size: 0.8em;
-        padding: 1em;
-        border-radius: 1em;
-        strong {
-            color: $pink;
-        }
-        > * {
-            display: block;
-        }
-    }
-
-    &:hover .next {
-        animation-name: shakeit;
-        animation-duration: 0.8s;
-        transform-origin: 50% 50%;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-    }
+  &:hover .next {
+    animation-name: shakeit;
+    animation-duration: 0.8s;
+    transform-origin: 50% 50%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
 
 }
