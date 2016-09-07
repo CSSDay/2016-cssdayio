@@ -497,14 +497,14 @@ main {
     main {
       width: 900px; } }
 
-.sponsorship-details {
+.subpage-details {
   padding: 1.5rem;
   padding-top: 120px; }
-  .sponsorship-details iframe {
+  .subpage-details iframe {
     float: right;
     margin-left: 1.5rem;
     margin-bottom: 1.5rem; }
-  .sponsorship-details .photos {
+  .subpage-details .photos {
     width: 100%; }
 
 /****************************************
