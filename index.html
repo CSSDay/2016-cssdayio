@@ -106,6 +106,15 @@
         <div class="speaker-list">
 
           <div class="speaker">
+            <div data-speaker="sarah" class="image-wrap">
+              <img src="/images/speakers/sarah.jpg" alt="Sarah Drasner">
+            </div>
+            <a href="#" data-speaker="sarah" class="name">Sarah Drasner</a>
+            <a href="https://twitter.com/sarah_edo" class="twitter">@sarah_edo</a>
+            <div class="talk">SVG: from Practical to Wild</div>
+          </div>
+
+          <div class="speaker">
             <div data-speaker="ben" class="image-wrap">
               <img src="/images/speakers/ben.jpg" alt="Ben Adam">
             </div>
@@ -114,13 +123,14 @@
             <div class="talk">Functional CSS - Applying the principles of functional programming to CSS.</div>
           </div>
 
-<!--           <div class="speaker no-click">
+          <div class="speaker">
             <div data-speaker="stacy" class="image-wrap">
               <img src="/images/speakers/stacy.jpg" alt="Stacy Kvernmo">
             </div>
             <a href="#" data-speaker="stacy" class="name">Stacy Kvernmo</a>
             <a href="https://twitter.com/stacykvernmo" class="twitter">@stacykvernmo</a>
-          </div> -->
+            <div class="talk">Make Web Design Great Again.</div>
+          </div>
 
           <div class="speaker">
             <div data-speaker="cj" class="image-wrap">
@@ -158,14 +168,14 @@
             <div class="talk">Style Guide-Driven Development: Documentation that Does Work.</div>
           </div>
 
-<!--           <div class="speaker no-click">
-            <div class="image-wrap">
+          <div class="speaker">
+            <div data-speaker="john" class="image-wrap">
               <img src="/images/speakers/john.jpg" alt="John Boere">
             </div>
             <a href="#" class="name">John Boere</a>
             <a href="https://twitter.com/cliffhangersolu" class="twitter">@cliffhangersolu</a>
             <div class="talk">jQuery out, CSS in.</div>
-          </div> -->
+          </div>
 
         </div>
       </div>
@@ -208,11 +218,32 @@
 
     <div class="speaker-profiles">
 
+      <div class="speaker sarah">
+        <div class="image" style="background-image: url('/images/speakers/sarah.jpg')"></div>
+        <div class="content">
+          <h2 class="title">SVG: from Practical to Wild</h2>
+          <p>In this session, we'll manipulate SVG for a broad range of use cases. We'll implement an accessible icon system, we'll use sprites to create dynamic responsive animated graphics. We’ll use SVGs as a window with clipPath, push the boundaries of the CPU with filters, and even combine techniques to create otherworldly effects. We'll even use SVGs to make a game in React. This session will show off a broad range of SVG capabilities - from common use cases to innovative creations.</p>
+          <h3 class="bio">Bio</h3>
+          <p>Sarah is an award-winning Speaker, Consultant, and Staff Writer at CSS-Tricks. She's formerly Manager of UX Design &amp; Engineering at Trulia (Zillow). She's given a Frontend Masters workshop on Advanced SVG Animations, and is working on a book for O'Reilly on SVG Animations. Last year Sarah won CSS Dev Conf's "Best of Best of Award" as well as "Best Code Wrangler" from CSS Design Awards. She has worked for 15 years as a web developer and designer, and at points worked as a Scientific Illustrator and a Undergraduate Professor, and has tutored a Byzantine Icon painter in Santorini, Greece.</p>
+        </div>
+      </div>
+
       <div class="speaker ben">
         <div class="image" style="background-image: url('/images/speakers/ben.jpg')"></div>
         <div class="content">
           <h2 class="title">Functional CSS - Applying the principles of functional programming to CSS.</h2>
-          <p class="description">If working on a CSS codebase has become a nightmare of specificity, code bloat and every time you try and remove CSS something breaks, this talk may be for you. We will focus on how applying concepts from functional programming can make your CSS truly reusable, easier to manage for large teams, and maybe, just maybe, you will start to love CSS.</p>
+          <p>If working on a CSS codebase has become a nightmare of specificity, code bloat and every time you try and remove CSS something breaks, this talk may be for you. We will focus on how applying concepts from functional programming can make your CSS truly reusable, easier to manage for large teams, and maybe, just maybe, you will start to love CSS.</p>
+        </div>
+      </div>
+
+      <div class="speaker stacy">
+        <div class="image" style="background-image: url('/images/speakers/stacy.jpg')"></div>
+        <div class="content">
+          <h2 class="title">Make Web Design Great Again.</h2>
+          <p>For far too long we've been forced to reuse layout patterns that have worked in the past, creating a web full of sites that all look the same. Narrow timelines, browser support restrictions and lack of a true grid system have led us to create work that is "good enough".</p>
+          <p>I've spent years exploring how we can make the web a more unique space. CSS Grid Layout is on the horizon and will play a major role in the design of our sites. Finally having a true, 2 dimensional grid will give our layouts much more flexibility and it is on us to explore the possibilities.</p>
+          <h3 class="bio">Bio</h3>
+          <p>Stacy Kvernmo has spent the past 14 years experimenting with design tools and processes while staying current with the latest web technologies. Whether it is sorting through content and research to develop an effective information architecture, designing systems and style guides, or writing front-end code, Stacy embraces the spectrum of challenges throughout a project. As a proud member of OddBird's design team, Stacy Kvernmo takes the lead on interface development, architecting accessible and maintainable HTML, CSS, and Sass.</p>
         </div>
       </div>
 
@@ -220,7 +251,7 @@
         <div class="image" style="background-image: url('/images/speakers/cj.jpg')"></div>
         <div class="content">
           <h2 class="title">Solving CSS at scale with your own UI framework.</h2>
-          <p class="description">CSS can get pretty gnarly in massive codebases. In this talk I'll discuss some common pathologies and explain the problems they can cause. I'll end the talk by discussing how you can build your own UI framework to make it easy to work with CSS at scale.</p>
+          <p>CSS can get pretty gnarly in massive codebases. In this talk I'll discuss some common pathologies and explain the problems they can cause. I'll end the talk by discussing how you can build your own UI framework to make it easy to work with CSS at scale.</p>
         </div>
       </div>
 
@@ -228,7 +259,7 @@
         <div class="image" style="background-image: url('/images/speakers/pralie.jpg')"></div>
         <div class="content">
           <h2 class="title">The In-Betweeners of Responsive Web Design</h2>
-          <p class="description">With such a wide array of screen resolutions and devices, there's a lot more to consider when building responsive websites than just "desktop" and "mobile". In this talk, we’ll cover the importance of content-centric breakpoints over device-centric ones, and discuss design patterns and tricks to help you level up your sites' responsiveness.</p>
+          <p>With such a wide array of screen resolutions and devices, there's a lot more to consider when building responsive websites than just "desktop" and "mobile". In this talk, we’ll cover the importance of content-centric breakpoints over device-centric ones, and discuss design patterns and tricks to help you level up your sites' responsiveness.</p>
         </div>
       </div>
 
@@ -236,15 +267,23 @@
         <div class="image" style="background-image: url('/images/speakers/miriam.jpg')"></div>
         <div class="content">
           <h2 class="title">Code Patterns for Pattern Making</h2>
-          <p class="description">Style Guides &amp; Pattern Libraries are great tools for documenting the relationships between code and design, but beautiful docs are only half the battle. Behind the scenes those patterns have to live in our code, and make life easier for developers. Let's talk about how we build patterns in code, and how we can use them to automate a style guide.</p>
+          <p>Style Guides &amp; Pattern Libraries are great tools for documenting the relationships between code and design, but beautiful docs are only half the battle. Behind the scenes those patterns have to live in our code, and make life easier for developers. Let's talk about how we build patterns in code, and how we can use them to automate a style guide.</p>
         </div>
       </div>
 
       <div class="speaker jan">
         <div class="image" style="background-image: url('/images/speakers/jan.jpg')"></div>
         <div class="content">
-          <h2 class="title">Style Guide-Driven Development: Documentation that Does Work.</h2>
-          <p class="description">A style guide can be an incredibly powerful tool for your development process. By documenting your CSS the right way, you can ensure modularity, maintainability, and flexibility. We'll look at a few examples and talk about how your CSS can enable better application code as well as communication between developers, designers, and stakeholders.</p>
+          <h2 class="title">Style Guide-Driven Development: Documentation that Does Work</h2>
+          <p>A style guide can be an incredibly powerful tool for your development process. By documenting your CSS the right way, you can ensure modularity, maintainability, and flexibility. We'll look at a few examples and talk about how your CSS can enable better application code as well as communication between developers, designers, and stakeholders.</p>
+        </div>
+      </div>
+
+      <div class="speaker john">
+        <div class="image" style="background-image: url('/images/speakers/john.jpg')"></div>
+        <div class="content">
+          <h2 class="title">jQuery out, CSS in</h2>
+          <p>How we migrated our single page app from using CPU intensive jQuery to efficient CSS, improving performance, reducing code and making our clients happy.</p>
         </div>
       </div>
 

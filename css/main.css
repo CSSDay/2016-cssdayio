@@ -337,7 +337,8 @@ button:not(.no-theme), a.button {
   text-align: center; }
   .sponsor-logos > a {
     display: inline-block;
-    width: 45%; }
+    width: 45%;
+    min-width: 350px; }
   .sponsor-logos img {
     vertical-align: middle;
     max-height: 120px;
