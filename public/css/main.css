@@ -342,9 +342,10 @@ button:not(.no-theme), a.button {
   .sponsor-logos img {
     vertical-align: middle;
     max-height: 120px;
-    width: 80%;
     margin-top: 1em;
     margin-bottom: 1em; }
+    .sponsor-logos img[src$="svg"] {
+      width: 80%; }
   .sponsor-logos .next {
     display: inline-block;
     vertical-align: middle;
