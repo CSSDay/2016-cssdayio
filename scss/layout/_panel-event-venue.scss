@@ -1,11 +1,67 @@
 .panel.event-venue {
-    background-image: url('/images/photos.png');
-    background-repeat: no-repeat;
-    background-size: contain;
+  background-image: url('/images/photos.png');
+  background-repeat: no-repeat;
+  background-size: contain;
 
-    @include wider-than(900px) {
-
-        // We need this since the image crowds the content
-        header { margin-bottom: $gutter * 2; }
+  .map {
+    position: relative;
+    background-image: url('/images/map.png');
+    background-size: cover;
+    background-position: bottom right;
+    margin-left: -$gutter;
+    margin-right: -$gutter;
+    
+    height: 700px;
+    @include wider-than(700px) {
+      height: 400px;
     }
+
+    .info {
+      background-color: rgba($blue, 0.8);
+      color: #fff;
+      border-radius: 1em;
+      padding: $gutter;
+      transition: all 0.2s;
+      overflow: hidden;
+      font-size: 0.8em;
+
+      position: absolute;
+      left: 2em;
+      top: 2em;
+      right: 2em;
+      @include wider-than(700px) {
+        right: 40%;
+        bottom: 10em;
+      }
+
+      p { text-align: left; }
+      .toggle-details { color: #fff; }
+
+      @include owl($gutter);
+      section { @include owl($gutter); }
+      section:first-child { display: block; }
+      section:last-child { display: none; }
+    }
+
+  }
+
+  .map.details {
+    
+    .info {
+      section:first-child { display: none; }
+      section:last-child { display: block; }
+      a { color: #fff; }
+      top: 0; right: 0; bottom: 0; left: 0;
+      border-radius: 0;
+      background-color: $dark-blue;
+    }
+
+  }
+
+
+  @include wider-than(900px) {
+
+    // We need this since the image crowds the content
+    header { margin-bottom: $gutter * 2; }
+  }
 }

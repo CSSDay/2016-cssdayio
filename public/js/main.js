@@ -36,4 +36,10 @@ $(function() {
     $('body').addClass('safari')
   }
 
+  $('button.toggle-details').on('click', function() {
+    $(this).parents('.map').toggleClass('details');
+    var onDetails = $(this).parents('.map').hasClass('details');
+    $(this).text(onDetails ? 'Hide Details' : 'See Details');
+  })
+
 })

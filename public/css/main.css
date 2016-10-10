@@ -436,6 +436,75 @@ button:not(.no-theme), a.button {
   background-image: url("/images/photos.png");
   background-repeat: no-repeat;
   background-size: contain; }
+  .panel.event-venue .map {
+    position: relative;
+    background-image: url("/images/map.png");
+    background-size: cover;
+    background-position: bottom right;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    height: 700px; }
+    @media (min-width: 700px) {
+      .panel.event-venue .map {
+        height: 400px; } }
+    .panel.event-venue .map .info {
+      background-color: rgba(49, 175, 203, 0.8);
+      color: #fff;
+      border-radius: 1em;
+      padding: 1.5rem;
+      transition: all 0.2s;
+      overflow: hidden;
+      font-size: 0.8em;
+      position: absolute;
+      left: 2em;
+      top: 2em;
+      right: 2em;
+      /**
+     * Apply to containers to get nice gutters between vertical items
+     *
+     * More Details: https://www.youtube.com/watch?v=w4skJXB03Ho&noredirect=1
+     */ }
+      @media (min-width: 700px) {
+        .panel.event-venue .map .info {
+          right: 40%;
+          bottom: 10em; } }
+      .panel.event-venue .map .info p {
+        text-align: left; }
+      .panel.event-venue .map .info .toggle-details {
+        color: #fff; }
+      .panel.event-venue .map .info > * {
+        margin-top: 0;
+        margin-bottom: 0; }
+      .panel.event-venue .map .info > * + * {
+        margin-top: 1.5rem; }
+      .panel.event-venue .map .info section {
+        /**
+     * Apply to containers to get nice gutters between vertical items
+     *
+     * More Details: https://www.youtube.com/watch?v=w4skJXB03Ho&noredirect=1
+     */ }
+        .panel.event-venue .map .info section > * {
+          margin-top: 0;
+          margin-bottom: 0; }
+        .panel.event-venue .map .info section > * + * {
+          margin-top: 1.5rem; }
+      .panel.event-venue .map .info section:first-child {
+        display: block; }
+      .panel.event-venue .map .info section:last-child {
+        display: none; }
+  .panel.event-venue .map.details .info {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 0;
+    background-color: #036277; }
+    .panel.event-venue .map.details .info section:first-child {
+      display: none; }
+    .panel.event-venue .map.details .info section:last-child {
+      display: block; }
+    .panel.event-venue .map.details .info a {
+      color: #fff; }
   @media (min-width: 900px) {
     .panel.event-venue header {
       margin-bottom: 3rem; } }
