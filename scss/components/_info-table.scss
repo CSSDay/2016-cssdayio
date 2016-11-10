@@ -110,3 +110,10 @@ $grid-gutter: 0.5 * $gutter;
 
 }
 
+.info-table.schedule {
+  text-align: center !important;
+
+  .row > :first-child {
+    font-size: 0.8em;
+  }
+}

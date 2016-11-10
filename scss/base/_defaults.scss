@@ -6,18 +6,18 @@
 // https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
 
 html {
-    box-sizing: border-box;
-    color: $default-text-color;
-    font: $default-font-size $default-font-family;
-    font-weight: $default-font-weight;
-    letter-spacing: 0.05em;
+  box-sizing: border-box;
+  color: $default-text-color;
+  font: $default-font-size $default-font-family;
+  font-weight: $default-font-weight;
+  letter-spacing: 0.05em;
 }
 
 *, *::before, *::after {
-    box-sizing: inherit;
-    color: inherit;
-    font: inherit;
-    letter-spacing: inherit;
+  box-sizing: inherit;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
 }
 
 

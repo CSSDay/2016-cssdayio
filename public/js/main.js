@@ -18,7 +18,7 @@ $(function() {
     $('.page').removeClass('show-menu');
   });
 
-  $('.name, .image-wrap', '.speaker-list .speaker:not(.no-click)').on('click', function(e) {
+  $('[data-speaker]').on('click', function(e) {
     e.preventDefault();
     $('.page').addClass('show-profile');
     var speaker = $(this).data('speaker');

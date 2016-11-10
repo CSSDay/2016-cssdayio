@@ -271,6 +271,11 @@ button:not(.no-theme), a.button {
           transform: rotate(-10deg);
   z-index: 1000; }
 
+.info-table.schedule {
+  text-align: center !important; }
+  .info-table.schedule .row > :first-child {
+    font-size: 0.8em; }
+
 .speaker-list {
   text-align: center; }
   .speaker-list .speaker {
