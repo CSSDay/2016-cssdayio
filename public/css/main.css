@@ -342,8 +342,11 @@ button:not(.no-theme), a.button {
   text-align: center; }
   .sponsor-logos > a {
     display: inline-block;
-    width: 45%;
-    min-width: 350px; }
+    width: 80%; }
+    @media (min-width: 450px) {
+      .sponsor-logos > a {
+        width: 45%;
+        min-width: 350px; } }
   .sponsor-logos img {
     vertical-align: middle;
     max-height: 120px;
@@ -793,3 +796,5 @@ body:not(.safari) .speaker-profiles-frame {
   color: #fff; }
   .primary-footer a {
     color: #fff; }
+  .primary-footer .people > * + * {
+    margin-left: 1em; }

@@ -3,7 +3,10 @@
   min-height: 250px;
   padding: $gutter;
   color: #fff;
-  a {
-    color: #fff;
+
+  a { color: #fff; }
+  
+  .people > * + * {
+    margin-left: 1em;
   }
 }
